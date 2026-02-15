@@ -28,6 +28,7 @@ router.put("/:id", async (req,res)=>{
     const users = await User.findByIdAndUpdate(req.params.id, req.body, {new : true});
     res.status(201).json(users)
  })
+ 
 
  //Delete Single Users
 router.delete("/:id", async (req,res)=>{
